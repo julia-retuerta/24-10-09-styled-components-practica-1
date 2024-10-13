@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyles = createGlobalStyle`
 *,
 *::after,
 *::before {
@@ -24,3 +27,4 @@ a {
   text-decoration: none;
   color: inherit;
 }
+`;
