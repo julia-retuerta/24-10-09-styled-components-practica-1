@@ -8,30 +8,60 @@ const StyledOverviewTodayCard = styled.div`
   align-items: center;
   background-color: #f1f3fa;
   border-radius: 5px;
-  padding-block: 26px 24px;
+  padding: 26px 31px 24px 24px;
 `;
 
-const StyledOverviewTodayCardLikesSocialMediaIcon = styled.div``;
+const StyledOverviewTodayCardLikesSocialMediaIcon = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 21px;
+`;
+
+const StyledOverviewTodayCardLikesWord = styled.span`
+  color: #63687d;
+  font-size: 14px;
+  font-weight: 700;
+`;
 
 const StyledOverviewTodayCardSocialMediaImg = styled.img``;
 
-const StyledOverviewTodayCardLikesWord = styled.span``;
+const StyledOverviewTodayCardNumberOfLikes = styled.span`
+  color: #1d1f29;
+  font-size: 32px;
+  font-weight: 700;
+`;
 
-const StyledOverviewTodayCardNumberOfLikes = styled.span``;
+const StyledOverviewTodayCardLikesWinLose = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-const StyledOverviewTodayCardLikesWinLose = styled.div``;
+const StyledOverviewTodayCardArrowPercentage = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3px;
+`;
 
 const StyledOverviewTodayCardArrowImg = styled.img``;
 
-const StyledOverviewTodayCardPercentageUpOrDown = styled.span``;
+const StyledOverviewTodayCardPercentageUpOrDown = styled.span`
+  font-size: 12px;
+  font-weight: 700;
+  color: ${({ $isArrowUp }) => ($isArrowUp ? '#1EB589' : '#DC414C')};
+`;
 
 export {
   StyledOverviewTodayCard,
   StyledOverviewTodayCardLikesSocialMediaIcon,
   StyledOverviewTodayCardSocialMediaImg,
   StyledOverviewTodayCardLikesWord,
-  StyledOverviewTodayCardNumberOfLikes,
   StyledOverviewTodayCardLikesWinLose,
+  StyledOverviewTodayCardNumberOfLikes,
+  StyledOverviewTodayCardArrowPercentage,
   StyledOverviewTodayCardArrowImg,
   StyledOverviewTodayCardPercentageUpOrDown
 };

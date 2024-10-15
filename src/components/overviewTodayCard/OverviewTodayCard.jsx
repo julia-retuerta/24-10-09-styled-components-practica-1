@@ -1,6 +1,7 @@
 import {
   StyledOverviewTodayCard,
   StyledOverviewTodayCardArrowImg,
+  StyledOverviewTodayCardArrowPercentage,
   StyledOverviewTodayCardLikesSocialMediaIcon,
   StyledOverviewTodayCardLikesWinLose,
   StyledOverviewTodayCardLikesWord,
@@ -27,14 +28,15 @@ const OverviewTodayCard = ({
         <StyledOverviewTodayCardSocialMediaImg src={socialMediaSrc} alt={socialMediaAlt} />
       </StyledOverviewTodayCardLikesSocialMediaIcon>
 
-      <StyledOverviewTodayCardNumberOfLikes>{numberOfLikes}</StyledOverviewTodayCardNumberOfLikes>
-
       <StyledOverviewTodayCardLikesWinLose>
-        <StyledOverviewTodayCardArrowImg src={arrowSrc} alt={arrowAlt} />
+        <StyledOverviewTodayCardNumberOfLikes>{numberOfLikes}</StyledOverviewTodayCardNumberOfLikes>
 
-        <StyledOverviewTodayCardPercentageUpOrDown $isArrowUp={isArrowUp}>
-          {percentageUpOrDown}
-        </StyledOverviewTodayCardPercentageUpOrDown>
+        <StyledOverviewTodayCardArrowPercentage>
+          <StyledOverviewTodayCardArrowImg src={arrowSrc} alt={arrowAlt} />
+          <StyledOverviewTodayCardPercentageUpOrDown $isArrowUp={isArrowUp}>
+            {percentageUpOrDown}
+          </StyledOverviewTodayCardPercentageUpOrDown>
+        </StyledOverviewTodayCardArrowPercentage>
       </StyledOverviewTodayCardLikesWinLose>
     </StyledOverviewTodayCard>
   );

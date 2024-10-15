@@ -1,13 +1,11 @@
-import FollowersCardsContainer from './components/followersCardsContainer/FollowersCardsContainer';
-import OverviewTodayCardsContainer from './components/overviewTodayCardContainer/OverviewTodayCardContainer';
+import PageContainer from './components/pageContainer/PageContainer';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <FollowersCardsContainer />
-      <OverviewTodayCardsContainer/>
+      <PageContainer title='Social Media Dashboard' subtitle='Total Followers: 23,004' />
     </>
   );
 };
