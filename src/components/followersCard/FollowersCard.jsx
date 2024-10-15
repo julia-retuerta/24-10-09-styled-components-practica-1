@@ -1,14 +1,17 @@
 import {
   StyledFollowersCard,
   StyledFollowersCardArrowImg,
+  StyledFollowersCardFollowersWinLose,
   StyledFollowersCardFollowersWord,
   StyledFollowersCardNumberOfFollowers,
   StyledFollowersCardNumberOfFollowersUpOrDown,
+  StyledFollowersCardSocialMediaIconUser,
   StyledFollowersCardSocialMediaImg,
   StyledFollowersCardUser
 } from './FollowersCard.styles';
 
 const FollowersCard = ({
+  borderColor,
   socialMediaSrc,
   socialMediaAlt,
   user,
@@ -18,21 +21,26 @@ const FollowersCard = ({
   arrowAlt,
   numberOfFollowersUpOrDown
 }) => {
-  return (
-    <StyledFollowersCard>
-      <StyledFollowersCardSocialMediaImg src={socialMediaSrc} alt={socialMediaAlt} />
+  const isArrowUp = arrowSrc.includes('up');
 
-      <StyledFollowersCardUser>{user}</StyledFollowersCardUser>
+  return (
+    <StyledFollowersCard $borderColor={borderColor}>
+      <StyledFollowersCardSocialMediaIconUser>
+        <StyledFollowersCardSocialMediaImg src={socialMediaSrc} alt={socialMediaAlt} />
+        <StyledFollowersCardUser>{user}</StyledFollowersCardUser>
+      </StyledFollowersCardSocialMediaIconUser>
 
       <StyledFollowersCardNumberOfFollowers>{numberOfFollowers}</StyledFollowersCardNumberOfFollowers>
 
       <StyledFollowersCardFollowersWord>{followersWord}</StyledFollowersCardFollowersWord>
 
-      <StyledFollowersCardArrowImg src={arrowSrc} alt={arrowAlt} />
+      <StyledFollowersCardFollowersWinLose>
+        <StyledFollowersCardArrowImg src={arrowSrc} alt={arrowAlt} />
 
-      <StyledFollowersCardNumberOfFollowersUpOrDown>
-        {numberOfFollowersUpOrDown}
-      </StyledFollowersCardNumberOfFollowersUpOrDown>
+        <StyledFollowersCardNumberOfFollowersUpOrDown $isArrowUp={isArrowUp}>
+          {numberOfFollowersUpOrDown}
+        </StyledFollowersCardNumberOfFollowersUpOrDown>
+      </StyledFollowersCardFollowersWinLose>
     </StyledFollowersCard>
   );
 };

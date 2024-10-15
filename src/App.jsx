@@ -1,11 +1,13 @@
-import FollowersCardContainer from './components/followersCardContainer/FollowersCardContainer';
+import FollowersCardsContainer from './components/followersCardsContainer/FollowersCardsContainer';
+import OverviewTodayCardsContainer from './components/overviewTodayCardContainer/OverviewTodayCardContainer';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <FollowersCardContainer />
+      <FollowersCardsContainer />
+      <OverviewTodayCardsContainer/>
     </>
   );
 };

@@ -1,13 +1,14 @@
 import { FOLLOWERSCARDS } from '../../constants/followersCards';
 import FollowersCard from '../followersCard/FollowersCard';
-import { StyledFollowersCard } from '../followersCard/FollowersCard.styles';
+import { StyledFollowersCardsContainer } from './followersCardsContainer.styles';
 
-const FollowersCardContainer = () => {
+const FollowersCardsContainer = () => {
   return (
-    <StyledFollowersCard>
+    <StyledFollowersCardsContainer>
       {FOLLOWERSCARDS.map(followersCard => (
         <FollowersCard
           key={followersCard.id}
+          borderColor={followersCard.borderColor}
           socialMediaSrc={followersCard.socialMediaSrc}
           socialMediaAlt={followersCard.socialMediaAlt}
           user={followersCard.user}
@@ -18,8 +19,8 @@ const FollowersCardContainer = () => {
           numberOfFollowersUpOrDown={followersCard.numberOfFollowersUpOrDown}
         />
       ))}
-    </StyledFollowersCard>
+    </StyledFollowersCardsContainer>
   );
 };
 
-export default FollowersCardContainer;
+export default FollowersCardsContainer;
